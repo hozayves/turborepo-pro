@@ -1,0 +1,28 @@
+{
+  "name": "@chafetz/server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon src/index.ts",
+    "test": "echo 'Error: no test specified'",
+    "lint": "eslint \"**/*.{js,ts}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "express": "^4.21.1"
+  },
+  "dependencies": {
+    "@repo/typescript-config": "*",
+    "@repo/eslint-config": "*",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}

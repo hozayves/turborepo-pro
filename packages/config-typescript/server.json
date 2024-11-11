@@ -1,5 +1,7 @@
 {
-    "extends": "@repo/typescript-config/base.json",
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "extends": "./base.json",
+    "display": "Server",
     "compilerOptions": {
         "noImplicitAny": true,
         "noImplicitReturns": false,

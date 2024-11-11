@@ -6,23 +6,21 @@
     "build": "tsc",
     "dev": "nodemon src/index.ts",
     "test": "echo 'Error: no test specified'",
-    "lint": "eslint \"**/*.{js,ts}\""
+    "lint": "eslint \"**/*.{js,ts}\" --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@repo/typescript-config": "*",
-    "@repo/eslint-config": "*",
     "@types/express": "^5.0.0",
     "@types/node": "^22.9.0",
     "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
-    "typescript": "^5.6.3",
     "vitest": "^2.1.4"
   }
 }

@@ -10,7 +10,7 @@
     "dev:dashboard": "turbo dev --filter=@chafetz/dashboard",
     "dev:customer": "turbo dev --filter=@chafetz/customer",
     "lint": "turbo lint",
-    "lint:fix": "turbo lint --fix",
+    "lint:fix": "turbo lint -- --fix",
     "lint:server": "turbo lint --filter=@chafetz/server",
     "lint:dashboard": "turbo lint --filter=@chafetz/dashboard",
     "lint:customer": "turbo lint --filter=@chafetz/customer",
@@ -26,7 +26,8 @@
     "lint-staged": "^15.2.10",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
-    "turbo": "^2.2.3"
+    "turbo": "^2.2.3",
+    "typescript": "^5.3.3"
   },
   "engines": {
     "node": ">=18"

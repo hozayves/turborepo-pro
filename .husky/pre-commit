@@ -1,7 +1,7 @@
 
 echo "🚀 Starting pre-commit checks..."
 # Run tests and lint-staged
-npm run test && npx lint-staged
+npx lint-staged
 # ... existing code ...
 echo "✅ Pre-commit checks passed! Proceeding to tests..."
 # Run tests in non-watch mode

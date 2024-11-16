@@ -1,6 +1,7 @@
 const { resolve } = require("node:path");
 
-const project = resolve(process.cwd(), "tsconfig.json");
+const project = resolve(process.cwd(), "tsconfig.eslint.json");
+console.log("Resolved tsconfig path : ", project);
 
 /*
  * This is a custom ESLint configuration for use with

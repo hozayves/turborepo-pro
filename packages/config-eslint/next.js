@@ -60,5 +60,9 @@ module.exports = {
         ignoreDeclarationSort: true,
       },
     ],
+    "@typescript-eslint/no-confusing-void-expression": "off",
+    "react/jsx-sort-props": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "unicorn/filename-case": "off",
   },
 };

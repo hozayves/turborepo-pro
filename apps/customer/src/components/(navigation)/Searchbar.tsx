@@ -1,12 +1,11 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 
 function Searchbar({ setNavVisible }: { setNavVisible: (value: boolean) => void }) {
 
     return (
-        <div className='flex justify-between items-center px-4 py-4 md:px-5 lg:px-20 xl:px-32 md:bg-background md:text-foreground text-primary-text md:border-b md:border-border'>
+        <div className='flex justify-between items-center px-4 py-4 md:px-5 lg:px-20 xl:px-32 md:bg-background md:text-foreground  md:border-b md:border-border'>
             <div className='flex items-center gap-2 flex-1'>
                 <button type='button' className='md:hidden block' onClick={() => setNavVisible(true)}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">

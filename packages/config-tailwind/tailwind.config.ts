@@ -40,6 +40,7 @@ const config: Omit<Config, 'content'> = {
                     '700': '#4D4D4D',
                     '800': '#333333',
                     '900': '#1A1A1A',
+                    'border': '#EDEDED',
                 },
                 green: {
                     DEFAULT: '#EDF2EE',

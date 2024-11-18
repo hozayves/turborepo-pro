@@ -1,9 +1,8 @@
 export default function Page(): JSX.Element {
 
   return (
-    <div>
-      <h1>Hello customer</h1>
-      <p>Welcome to the customer page</p>
+    <div className="bg-background text-center h-screen py-5">
+      <h1 className="text-2xl font-semibold">Welcome to Chafetz</h1>
     </div>
   )
 }

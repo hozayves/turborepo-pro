@@ -12,11 +12,11 @@ function Location() {
             </div>
             <div className='hidden md:flex items-center gap-5 text-xs text-gray-500'>
                 <div>
-                    <select>
+                    <select className='bg-background text-foreground'>
                         <option value="en">Eng</option>
                         <option value="fr">Fr</option>
                     </select>
-                    <select>
+                    <select className='bg-background text-foreground'>
                         <option value="usd">USD</option>
                         <option value="eur">EUR</option>
                     </select>

@@ -1,14 +1,14 @@
 'use client'
 
 import Link from 'next/link'
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 function Navs({ isNavVisible, setNavVisible }: { isNavVisible: boolean, setNavVisible: (value: boolean) => void }) {
-    const [isDropdownOpen, setDropdownOpen] = useState(false);
+    const [isDropdownOpen, setDropdownOpen] = useState<boolean>(false);
 
     return (
-        <div className={`flex justify-between items-start py-4 px-4 md:px-0 md:py-0 pr-4 md:pr-5 lg:pr-20 xl:pr-32 text-primary-text bg-foreground absolute md:relative top-0 left-0 w-full h-full md:h-auto md:text-sm select-none md:-translate-x-0 ${isNavVisible ? '' : '-translate-x-full transition-transform duration-300'}`}>
-            <div className={`flex justify-start items-center flex-col md:flex-row w-full text-gray-400`}>
+        <div className={`flex justify-between items-start py-4 px-4 md:px-0 md:py-0 pr-4 md:pr-5 lg:pr-20 xl:pr-32 z-9999 text-primary-text bg-foreground fixed md:relative top-0 left-0 w-full h-full md:h-auto md:text-sm select-none md:-translate-x-0 ${isNavVisible ? '' : '-translate-x-full transition-transform duration-300'}`}>
+            <div className="flex justify-start items-center flex-col md:flex-row w-full text-gray-400">
                 <div className='w-full flex justify-end mb-5 md:hidden'>
                     <button type='button' className='p-2 rounded-full bg-gray-600' onClick={() => setNavVisible(false)} onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {

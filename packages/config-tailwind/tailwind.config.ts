@@ -18,6 +18,7 @@ const config: Omit<Config, 'content'> = {
                     hard: '#2C742F',
                     secondary: '#2C742F',
                     text: '#FFFFFF',
+                    extra: '#FCC900',
                 },
                 success: {
                     DEFAULT: '#00B207',
@@ -40,6 +41,7 @@ const config: Omit<Config, 'content'> = {
                     '700': '#4D4D4D',
                     '800': '#333333',
                     '900': '#1A1A1A',
+                    'border': '#EDEDED',
                 },
                 green: {
                     DEFAULT: '#EDF2EE',
@@ -59,6 +61,15 @@ const config: Omit<Config, 'content'> = {
             },
         },
     },
-    plugins: [],
+    plugins: [
+        require('daisyui'),
+    ],
+    daisyui: {
+        themes: false,
+        styled: true,
+        prefix: '',
+        utils: true,
+        base: false
+    },
 }
 export default config

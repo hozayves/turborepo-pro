@@ -2,10 +2,12 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import { usePathname } from 'next/navigation';
+import { Navigation } from '../../constants/navigation';
 
 function Navs({ isNavVisible, setNavVisible }: { isNavVisible: boolean, setNavVisible: (value: boolean) => void }) {
     const [isDropdownOpen, setDropdownOpen] = useState<boolean>(false);
-
+    const pathname = usePathname()
     return (
         <div className={`flex justify-between items-start py-4 px-4 md:px-0 md:py-0 pr-4 md:pr-5 lg:pr-20 xl:pr-32 z-9999 text-primary-text bg-foreground fixed md:relative top-0 left-0 w-full h-full md:h-auto md:text-sm select-none md:-translate-x-0 ${isNavVisible ? '' : '-translate-x-full transition-transform duration-300'}`}>
             <div className="flex justify-start items-center flex-col md:flex-row w-full text-gray-400">
@@ -44,10 +46,9 @@ function Navs({ isNavVisible, setNavVisible }: { isNavVisible: boolean, setNavVi
                     )}
                 </div>
                 <div className='flex w-full flex-col md:flex-row'>
-                    <Link href="" className='w-full py-3 border-b border-gray-600 md:border-none md:w-auto md:px-5 md:py-4 hover:text-gray-400 transition-colors duration-300 text-white md:hover:bg-primary md:hover:text-white'>Home</Link>
-                    <Link href="" className='w-full py-3 border-b border-gray-600 md:border-none md:w-auto md:px-5 md:py-4 hover:text-gray-400 transition-colors duration-300 md:hover:bg-primary md:hover:text-white'>Shop</Link>
-                    <Link href="" className='w-full py-3 border-b border-gray-600 md:border-none md:w-auto md:px-5 md:py-4 hover:text-gray-400 transition-colors duration-300 md:hover:bg-primary md:hover:text-white'>Cart</Link>
-                    <Link href="" className='w-full py-3 md:border-none md:w-auto md:px-5 md:py-4 hover:text-gray-400 transition-colors duration-300 md:hover:bg-primary md:hover:text-white'>Contact</Link>
+                    {Navigation.map(({ name, link }) => (
+                        <Link key={name} href={link} className={`first-letter:w-full py-3 border-b border-gray-600 md:border-none md:w-auto md:px-5 md:py-4 hover:text-gray-400 transition-colors duration-300 ${pathname === link ? 'text-white' : ''} md:hover:bg-primary md:hover:text-white capitalize`}>{name}</Link>
+                    ))}
                 </div>
                 <div className='w-full justify-end items-center text-white gap-1 hidden md:flex'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">

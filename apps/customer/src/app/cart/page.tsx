@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Cartcard from "../../components/wishlist/Cartcard";
 import { Product } from "../../constants/product";
 
@@ -17,7 +18,6 @@ export default function Page() {
                         </div>
                         <div className="lg:w-24 md:w-20 justify-between ">
                             <span className="justify-end">Subtotal</span>
-                            <span></span>
                         </div>
                     </div>
                     {Product.slice(0, 2).map((items) => (
@@ -40,7 +40,7 @@ export default function Page() {
                             <span className="font-medium">$57.00</span>
                         </div>
                     </div>
-                    <button type="button" className="px-7 md:px-5 bg-primary text-white rounded-full self-center py-3 text-sm mb-4 md:mb-0 md:w-full">Proceed to checkout</button>
+                    <Link href="/checkout" className="px-7 md:px-5 bg-primary text-white rounded-full self-center py-3 text-sm mb-4 md:mb-0 md:w-full text-center">Proceed to checkout</Link>
                 </div>
             </div>
         </div>

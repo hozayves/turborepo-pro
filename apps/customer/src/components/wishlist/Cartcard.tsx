@@ -1,4 +1,5 @@
 import Image from "next/image"
+import AdjustQty from "./adjustQty"
 
 
 interface Product {
@@ -25,20 +26,8 @@ export default function Cartcard({ name, price, image }: Product) {
                     </div>
                     <div className='flex justify-between md:items-center'>
                         <span className='md:hidden'>Quantity</span>
-                        <div className="flex items-center justify-center gap-2 border border-gray-100 p-1 rounded-full">
-                            <button type="button" className="p-1 rounded-full border border-gray-100 hover:border-gray hover:bg-gray-100 bg-gray w-6 h-6 flex justify-center items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
-                                </svg>
-                            </button>
-                            <span>0</span>
-                            <button type="button" className="p-1 rounded-full border border-gray-100 hover:border-gray hover:bg-gray-100 bg-gray w-6 h-6 flex justify-center items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                                </svg>
-
-                            </button>
-                        </div>
+                        {/* Quantity increase and decrease */}
+                        <AdjustQty />
                     </div>
                 </div>
                 <div className='flex justify-between font-medium md:w-10 md:justify-center md:items-center'>

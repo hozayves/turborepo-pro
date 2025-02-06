@@ -2,7 +2,7 @@
 
 export default function Input(
     { label, placeholder, name, type, optional, className }:
-        { label: string, placeholder: string, name: string, type: string, optional?: boolean, className?: string }
+        { label?: string, placeholder: string, name: string, type: string, optional?: boolean, className?: string }
 ) {
     return (
         <div className={`flex flex-col gap-1 ${className}`}>

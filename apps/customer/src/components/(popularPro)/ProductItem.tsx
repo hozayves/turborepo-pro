@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import Rating from "./Rating"
 
 interface Product {
@@ -20,7 +21,9 @@ function ProductItem({ product }: ProductItemProps) {
     return (
         <div className='border hover:border-primary-hard hover:shadow-[0px_0px_6px_0px_rgba(0,178,7,1)] min-w-[65%] md:min-w-[32%] lg:min-w-[24%] xl:min-w-[19.1%]  md:mb-3 flex items-center p-3 relative transition-all duration-300 cursor-pointer bg-white group rounded-md'>
             <div className="flex flex-col gap-3 w-full">
-                <Image src={product.image} alt={product.name} width={200} height={200} className="md:w-40 md:h-40 self-center" />
+                <Link href={`/product/${product.name}/${product.id}`}>
+                    <Image src={product.image} alt={product.name} width={200} height={200} className="md:w-40 md:h-40 self-center" />
+                </Link>
                 <div className="flex flex-row justify-between w-full">
                     <div className="flex flex-col gap-1 items-start">
                         <p className="text-sm text-gray-700 capitalize group-hover:text-primary-hard transition-all duration-300">{product.name}</p>

@@ -20,7 +20,7 @@ function Searchbar({ setNavVisible }: { setNavVisible: (value: boolean) => void 
                 <button type='button' className='bg-primary px-4 py-2 rounded-tr-md rounded-br-md text-white justify-end'>Search</button>
             </div>
             <div className='flex items-center gap-[2px] flex-1 justify-end'>
-                <Link href="/profile" className='md:px-1 lg:px-2 md:border-r md:border-border'>
+                <Link href="/profile/235" className='md:px-1 lg:px-2 md:border-r md:border-border'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                     </svg>
